@@ -1,14 +1,20 @@
+# -*- coding: utf-8 -*-
+
 import requests
+import settings
 
-class Model():
+class Brand:
 
-	def __init__(self,app_host=None):
-		self.host = app_host
+    def __init__(self, app_host=settings.HOST_CLIENT):
+        self.host = app_host
 
-	def getAll(self):
+    def get_all(self):
 
-		response = requests.get(self.host + '/brand')
+        response = requests.get(self.host + '/brand')
 
-		assert response.status_code == 200
+        brands = {}
 
-		return response.json()
+        if response.status_code == 200:
+            brands = response.json()
+
+        return brands

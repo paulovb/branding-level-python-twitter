@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 LANGUAGE = 'pt'
 
 #Chave da API do Twitter
@@ -5,3 +7,6 @@ TWITTER_CONSUMER_KEY = 'AsnB2VxhSJIQIgu8tOnXGfHDz'
 TWITTER_CONSUMER_SECRET = 'wij4GHLkPxQfmjsK08wgu8S0CPzaxtXSEnOam9SgwynmFdrMaB'
 TWITTER_ACCESS_TOKEN_KEY = '239947187-spLdQaShwE3K74KAYMVAqO4vlJi8RhJCZhM2KLfW'
 TWITTER_ACCESS_TOKEN_SECRET = 'BgZTKVOZ0FZ8T9Jp8SPwYsAEwqsKWDE5ftuBXuNllRAip'
+
+#Configuração de acesso ao client
+HOST_CLIENT = 'http://localhost:1337'

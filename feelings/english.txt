@@ -8,8 +8,8 @@ abhor	-3
 abhorred	-3
 abhorrent	-3
 abhors	-3
-abilities	2
-ability	2
+abilities   2
+ability 2
 aboard  1
 absentee    -1
 absentees	-1
