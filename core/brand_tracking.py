@@ -1,19 +1,22 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
+
 from TwitterAPI import TwitterAPI
 from TwitterAPI.TwitterError import TwitterRequestError, TwitterConnectionError
 from api.brand import Brand
 from api.mention import Mention
 from core.feeling_calculate import FeelingCalculate
-import settings
+from settings import TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN_KEY, \
+    TWITTER_ACCESS_TOKEN_SECRET
 
 
 class BrandTracking:
 
     api = TwitterAPI(
-        settings.TWITTER_CONSUMER_KEY,
-        settings.TWITTER_CONSUMER_SECRET,
-        settings.TWITTER_ACCESS_TOKEN_KEY,
-        settings.TWITTER_ACCESS_TOKEN_SECRET)
+        TWITTER_CONSUMER_KEY,
+        TWITTER_CONSUMER_SECRET,
+        TWITTER_ACCESS_TOKEN_KEY,
+        TWITTER_ACCESS_TOKEN_SECRET)
 
     brands = {}
     brands_name = []
@@ -70,9 +73,5 @@ class BrandTracking:
                     raise
                 else:
                     print(e)
-                    pass
             except TwitterConnectionError as e:
                 print(e)
-                pass
-
-BrandTracking()

@@ -13,7 +13,7 @@ class FeelingCalculate:
 
     def _load_feelings(self, file_name):
 
-        for feeling_line in open('./../feelings/' + file_name):
+        for feeling_line in open('./feelings/' + file_name):
             try:
                 feeling = feeling_line.split('\t')
                 self.feelings[feeling[0]] = int(feeling[1])
